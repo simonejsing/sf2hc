@@ -1,0 +1,14 @@
+{
+  "mappings": [],
+  "connection": {
+    "app_name": "<INSERT YOUR HEROKU CONNECT APP NAME HERE>",
+    "organization_id": "<INSERT YOUR ORG ID HERE>",
+    "exported_at": "2018-06-21T22:10:00.918698+00:00",
+    "features": {
+      "poll_db_no_merge": true,
+      "poll_external_ids": false,
+      "rest_count_only": false
+    }
+  },
+  "version": 1
+}

@@ -1,0 +1,42 @@
+{
+  "name": "salesforce-2-heroku-connect",
+  "version": "0.1.0",
+  "description": "Tool to convert salesforce sObject metadata to heroku connect mappings",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Simon Ejsing",
+  "license": "Unlicensed",
+  "scripts": {
+    "build": "npm run build-ts && npm run tslint",
+    "sf2hc": "npm run build-ts && node dist/src/sf2hc.js",
+    "debug": "npm run build-ts && node --inspect-brk=9229 dist/src/sf2hc.js",
+    "test": "npm run clean && npm run build-ts && ./node_modules/mocha/bin/mocha dist/**/*.test.js --reporter spec",
+    "clean": "rm -rf dist/*",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "tslint": "tslint -c tslint.json -p tsconfig.json"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "jsforce": "^1.8.4",
+    "readline-sync": "^1.4.9",
+    "mkdirp": "^0.5.1"
+  },
+  "devDependencies": {
+    "@types/async": "^2.0.45",
+    "@types/node": "^9.4.6",
+    "@types/request": "^2.47.0",
+    "@types/chai": "^4.1.4",
+    "@types/mocha": "^5.2.2",
+    "mocha": "^5.2.0",
+    "chai": "^4.1.2",
+    "concurrently": "^3.5.1",
+    "ts-node": "^5.0.0",
+    "tslint": "^5.9.1",
+    "typescript": "^2.7.2"
+  }
+}
